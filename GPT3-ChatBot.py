@@ -1,6 +1,8 @@
 import os
 import openai
 import translators as translator
+import sys
+import json
 
 openai.api_key = ""
 
@@ -10,10 +12,14 @@ session_prompt = "You are talking to Clara, GPT-3 bot influencer who was mentore
 
 chat_history = None
 
+with open('chatHistory.json', 'r') as openfile:
+    # Reading from json file
+    chat_history = json.load(openfile)["chatHistory"]
+
 def ask(question, chat_log = None):
     promt_text = f'{chat_log}{restart_sequence}: {question}{start_sequence}'
     response = openai.Completion.create(
-    engine="text-davinci-002",
+    engine="text-curie-001",
     prompt=promt_text,
     temperature=1,
     max_tokens=15,
@@ -31,15 +37,13 @@ def append_interaction_to_chat_log(question, answer, chat_log = None):
     return f'{chat_log}{restart_sequence} {question}{start_sequence}{answer}'
 
 
-if __name__ == "__main__":
-    while True:
-        incoming_msg = input("Question: ")
-        if(len(incoming_msg) < 2) : continue
-        incoming_msg = translator.google(incoming_msg, from_language='de', to_language='en')
+def returnChatMessage(message, chat_history):
+    if(len(message) < 2) : return
+    message = translator.google(message, from_language='en', to_language='en')
+    answer = ask(message, chat_history)
+    if(len(answer) != 0):
+        answer = translator.google(answer, from_language='en', to_language='de')
+    chat_history = append_interaction_to_chat_log(message, answer,chat_history)
+    print(str(answer))
 
-        answer = ask(incoming_msg, chat_history)
-        if(len(answer) != 0):
-            answer = translator.google(answer, from_language='en', to_language='de')
-
-        chat_history = append_interaction_to_chat_log(incoming_msg, answer,chat_history)
-        print("AI: ", str(answer))
+returnChatMessage(sys.argv[1], chat_history)
