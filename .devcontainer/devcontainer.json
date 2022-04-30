@@ -1,0 +1,16 @@
+{
+    "build": { 
+        "dockerfile": "Dockerfile",
+        "args": {
+            "TIMEZONE": "Europe/Berlin"
+        },
+    },
+    "containerUser": "1000",
+    "workspaceFolder": "/home/developer/project",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/developer/project,type=bind,consistency=cached",
+    "containerEnv": {},
+    "mounts": [],
+    "appPort": [
+        
+    ]
+}
