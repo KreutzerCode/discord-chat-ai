@@ -1,7 +1,12 @@
 [![](https://img.shields.io/badge/discord.js-v13-blue.svg?logo=npm)](https://github.com/discordjs)
 [![](https://img.shields.io/badge/openai-v2-blue.svg?logo=npm)](https://github.com/discordjs)
 
-<img width="175" height="175" style="display: block; margin: 0 auto" alt="Discord Chat AI" src="https://github.com/KreutzerCode/discord-chat-ai/blob/master/img/discord-chat-bot.png?raw=true">
+<div align="center" width="100%">
+    <img width="175" height="175" alt="Discord Chat AI" src="https://github.com/KreutzerCode/discord-chat-ai/blob/master/img/discord-chat-bot.png?raw=true">
+</div>
+
+
+
 <h3>Discord Chat-AI</h3>
 <br>
 <p>
