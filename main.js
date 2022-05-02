@@ -23,9 +23,7 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", async (message) => {
-  if (message.author.bot) return;
-  if (!message.content) return;
-  if (message.length < 2) return;
+  if (message.author.bot || !message.content || message.length < 2) return;
 
   message.channel.sendTyping();
 
