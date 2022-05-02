@@ -35,16 +35,21 @@ GPT-3's deep learning neural network is a model with over **175 billion** machin
 
 Learn more about GPT-3 in [this great article](https://www.techtarget.com/searchenterpriseai/definition/GPT-3) and of course on [OpenAI's website](https://openai.com/blog/gpt-3-apps/)
 
+**✅ Requirements**
 
-**🚀 Bot features**
++ GPT-3 API key
++ Discord developer account
+  <br>
+
+**🚀 Features**
 
 + Easily configurable chatbot character properties<br>
 + Persistent memory<br>
 + Easy to set up<br>
 + Variable length of the chat history<br>
 + Easy to use<br>
- <br>  
- 
+ <br>
+
 **📁 Installation**
 
 __Step 1.__
