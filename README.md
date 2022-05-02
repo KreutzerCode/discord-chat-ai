@@ -12,7 +12,8 @@
 </p>
 <br>
 <br>
- 
+
+
 **🤖 Project**
 
 Discord Chat-AI is a node js based Discord chatbot. It combines discord.js v13 with gpt-3 from openai to create interesting and exciting conversations.
@@ -20,6 +21,14 @@ Discord Chat-AI is a node js based Discord chatbot. It combines discord.js v13 w
 + Node v16+ <br>
 + openai v2+<br>
 + discord.js v13<br>
+
+**What is GPT-3?**
+
+GPT-3, or the third generation Generative Pre-trained Transformer, is a neural network machine learning model trained using internet data to generate any type of text. Developed by OpenAI, it requires a small amount of input text to generate large volumes of relevant and sophisticated machine-generated text.
+
+GPT-3's deep learning neural network is a model with over **175 billion** machine learning parameters. To put things into scale, the largest trained language model before GPT-3 was Microsoft's Turing NLG model, which had 10 billion parameters.
+
+Learn more about GPT-3 in [this great article](https://www.techtarget.com/searchenterpriseai/definition/GPT-3) and of course on [OpenAI's website](https://openai.com/blog/gpt-3-apps/)
 
 
 **🚀 Bot features**
