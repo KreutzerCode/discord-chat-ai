@@ -32,7 +32,7 @@ client.on("messageCreate", async (message) => {
     botAnswer = "..."
   } else {
     addConversationToChatHistory(message.content, botAnswer);
-  };
+  }
 
   message.channel.send(botAnswer);
 });
@@ -90,7 +90,5 @@ async function returnBotAnswer(message) {
     stop: [" Human:", " AI:"],
   });
 
-  let responseText = response['data'].choices[0].text.toString().trim();
-
-  return responseText;
+  return response['data'].choices[0].text.toString().trim();
 }
