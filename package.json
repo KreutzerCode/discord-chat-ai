@@ -1,27 +1,25 @@
 {
-  "name": "clara",
+  "name": "discord-chat-ai",
   "version": "1.0.0",
-  "description": "",
+  "description": "The discord chat AI powered by gpt-3",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "author": "KreutzerCode",
-  "license": "ISC",
+  "license": "MIT",
+  "keywords": [
+    "discord",
+    "discord.js",
+    "openai",
+    "gpt-3",
+    "davinci",
+    "chat",
+    "bot",
+    "chatbot",
+    "conversation"
+  ],
   "dependencies": {
-    "axios": "^0.24.0",
-    "bigeval": "^3.1.0",
-    "cheerio": "^1.0.0-rc.10",
-    "chromium": "^3.0.3",
-    "discord-math": "^1.0.5",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
-    "got": "^12.0.0",
-    "images-scraper": "^6.3.0",
-    "node-fetch": "^3.1.0",
-    "openai": "^2.0.5",
-    "puppeteer": "^13.0.1",
-    "request": "^2.88.2",
-    "ytsr": "^3.5.3"
+    "openai": "^2.0.5"
   }
 }
