@@ -1,25 +1,24 @@
+const fs = require("fs");
 const Discord = require("discord.js");
 const { Configuration, OpenAIApi } = require("openai");
 require("dotenv").config();
-const fs = require("fs");
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
-
 const client = new Discord.Client({
   intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
 });
 
 let { backstory, predefinedConversations, userConversations } = JSON.parse(fs.readFileSync('./chatData.json', 'utf8'));
 let chatHistoryString = "";
-const maxChatHistory = 100;
+const maxChatHistory = process.env.MAX_CHAT_HISTORY || 100;
 
 client.login(process.env.DISCORD_TOKEN);
 client.on("ready", () => {
   console.log(
-    `Clara Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels`
+    `Discord Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels`
   );
 });
 
